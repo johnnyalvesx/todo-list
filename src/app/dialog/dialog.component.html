@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Adicione uma tarefa à lista</h1>
+<div mat-dialog-content>
+
+  <form [formGroup]="tarefasForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Título da tarefa</mat-label>
+      <input maxlength=140 formControlName="tituloTarefa" matInput placeholder="Título da tarefa">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Data atual</mat-label>
+      <input maxlength=8 matInput formControlName="dataRegistro" [matDatepicker]="picker">
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Breve descrição sobre a tarefa</mat-label>
+      <textarea maxlength=500 matInput formControlName="descricaoTarefa"></textarea>
+    </mat-form-field>
+  </form>
+
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+  <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addTarefa()">Salvar</button>
+</div>

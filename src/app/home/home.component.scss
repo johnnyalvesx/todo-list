@@ -1,0 +1,43 @@
+// toolbar
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+// add button
+.button-container {
+  margin-top: 60px;
+  margin-right: 60px;
+  position: fixed;
+  top: 75vh;
+  right: 0;
+}
+
+// divider
+.mat-divider {
+  display: flex;
+  margin: 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+//list
+.mat-list-item {
+  margin-left: 12px;
+}
+
+//table
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.container{
+  
+}
+

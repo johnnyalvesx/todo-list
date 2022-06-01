@@ -1,0 +1,42 @@
+<!-- header -->
+<div>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span style="margin-left: 20px;">Tasks</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</div>
+
+<div>
+
+  <!-- add button -->
+  <div class="button-container">
+    <div class="btn-holder"></div>
+    <button mat-fab color="primary" aria-label="Adicionar tarefa à lista" (click)="openDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 30px; margin-left: 65px; margin-right: 65px;">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+
+    <ng-container matColumnDef="todosOsItensDasTarefas">
+      <mat-header-cell mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let row" style="padding: 0;">
+        <div style="margin: 12px">
+          <div class="firstline" style="font-size: 16px; margin-bottom: 3px;">{{row.tituloTarefa}}</div>
+          <div class="secondline" style="font-size: 14px; color: gray;">{{row.dataRegistro | date: 'EEEE MMM d, y'}}
+          </div>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <!-- <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row> -->
+    <mat-row matRipple *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+</div>
