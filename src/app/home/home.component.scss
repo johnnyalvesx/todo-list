@@ -3,6 +3,10 @@
   flex: 1 1 auto;
 }
 
+.toolbar-title {
+  margin-left: 20px;
+}
+
 // add button
 .button-container {
   margin-top: 60px;
@@ -12,24 +16,11 @@
   right: 0;
 }
 
-// divider
-.mat-divider {
-  display: flex;
-  margin: 0;
-  border-top-width: 2px;
-  border-top-style: solid;
-  margin-left: 24px;
-  margin-right: 24px;
-}
-
-//list
-.mat-list-item {
-  margin-left: 12px;
-}
-
-//table
-table {
-  width: 100%;
+// tabela
+.tabela {
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px
 }
 
 .mat-form-field {
@@ -37,7 +28,20 @@ table {
   width: 100%;
 }
 
-.container{
-  
+.padding-mat-cell {
+  padding: 0px;
 }
 
+.lines {
+  margin: 12px
+}
+
+.firstline {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.secondline {
+  font-size: 14px;
+  color: gray;
+}
